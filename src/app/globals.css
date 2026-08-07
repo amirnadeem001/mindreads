@@ -134,10 +134,58 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px dashed rgba(0, 0, 0, 0.12);
   flex-shrink: 0;
   text-align: center;
+  overflow: hidden;
+}
+
+.ad-slot--empty {
+  border: 1px dashed rgba(0, 0, 0, 0.12);
   gap: 2px;
+}
+
+.ad-slot--live {
+  background: transparent;
+}
+
+.ad-slot--script {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.ad-slot--smartlink {
+  text-decoration: none;
+  color: inherit;
+  gap: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #f3f4f6 0%, #e8eef7 100%);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.ad-slot--smartlink:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+}
+
+.ad-slot__smartlink-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.ad-slot__smartlink-cta {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1d4ed8;
 }
 
 .ad-slot__label {
@@ -487,47 +535,11 @@ img {
   position: relative;
   margin-bottom: 0;
   width: 100%;
+  min-height: 0;
 }
 
 .ad-slot--social-bar {
   width: 100% !important;
-}
-
-.social-bar__icons {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 8px;
-}
-
-.social-bar__icon {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  border-radius: 2px;
-}
-
-.social-bar__icon--fb {
-  background: var(--facebook);
-}
-
-.social-bar__icon--tw {
-  background: var(--twitter);
-}
-
-.social-bar__icon--ig {
-  background: #e1306c;
-}
-
-.social-bar__icon--yt {
-  background: var(--youtube);
 }
 
 /* ========== FOOTER ========== */
